@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hl.prms.dao.MessageDao">
+
+
+    <resultMap id="message" type="Message">
+        <id property="mid" column="message_id" javaType="int"/>
+        <result property="uid" column="user_id" javaType="int"/>
+        <result property="createTime" column="message_create_time" javaType="java.util.Date"/>
+        <result property="comment" column="message_comment" javaType="String"/>
+        <result property="mstatus" column="message_status" javaType="int"/>
+        <association property="user" javaType="User">
+            <id property="id" column="user_id"/>
+            <result property="name" column="user_name"/>
+        </association>
+    </resultMap>
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="mid" parameterType="Message">
+        insert into message_info(user_id,message_create_time,message_comment)
+        values(#{uid},#{createTime},#{comment})
+    </insert>
+
+    <delete id="delete" parameterType="String">
+        delete from message_info where message_id=#{mid}
+    </delete>
+
+    <select id="select" parameterType="String" resultMap="message">
+        select * from message_info where message_id=#{mid}
+    </select>
+
+    <select id="selectAll" resultMap="message">
+        select m.*,u.user_name from message_info m left join user_info u on m.user_id=u.user_id
+    </select>
+
+    <select id="selectAllByStatus" parameterType="String" resultMap="message">
+        select m.*,u.user_name from message_info m left join user_info u on m.user_id=u.user_id where message_status=#{status}
+    </select>
+
+    <update id="update" parameterType="String">
+        update message_info set message_status=0 where message_id=#{mid}
+    </update>
+    <select id="selectList" parameterType="String" resultMap="message">
+        select * from message_info where user_id=#{uid}
+    </select>
+</mapper>

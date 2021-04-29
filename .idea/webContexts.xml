@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/help_commonProblem.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/index.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/message_add.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/message_list.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/place_list.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/place_update.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/register.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/reserve_add.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/reserve_interface.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/reserve_list.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/statistic_reserve.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/statistic_user.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/top.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/user_add.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/user_excel.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/user_update.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages/validate.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/prms_web/src/main/webapp/index.jsp" value="file://$PROJECT_DIR$/prms_web/src/main/webapp" />
+      </map>
+    </option>
+  </component>
+</project>

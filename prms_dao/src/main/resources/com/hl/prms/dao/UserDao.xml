@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hl.prms.dao.UserDao">
+
+
+    <resultMap id="user" type="User">
+        <id property="id" column="user_id" javaType="int"/>
+        <result property="name" column="user_name" javaType="String"/>
+        <result property="sex" column="user_sex" javaType="String"/>
+        <result property="userName" column="user_username" javaType="String"/>
+        <result property="passWord" column="user_password" javaType="String"/>
+        <result property="profileImg" column="user_profile_img" javaType="String"/>
+        <result property="phoneNumber" column="user_phoneNumber" javaType="String"/>
+        <result property="createTime" column="user_create_time" javaType="java.util.Date"/>
+        <result property="lastEditTime" column="user_last_edit_time" javaType="java.util.Date"/>
+        <result property="identity" column="user_identity" javaType="int"/>
+        <result property="vip" column="user_vip" javaType="int"/>
+    </resultMap>
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="User">
+        insert into user_info(user_name,user_sex,user_username,user_password,user_profile_img,user_phoneNumber,user_create_time,user_last_edit_time,user_identity,user_vip)
+        values(#{name},#{sex},#{userName},#{passWord},#{profileImg},#{phoneNumber},#{createTime},#{lastEditTime},#{identity},#{vip})
+    </insert>
+
+    <update id="update" parameterType="User">
+        update user_info set user_name=#{name},user_sex=#{sex},user_password=#{passWord},user_profile_img=#{profileImg},user_phoneNumber=#{phoneNumber},user_last_edit_time=#{lastEditTime},user_identity=#{identity},user_vip=#{vip} where user_id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="String">
+        delete from user_info where user_id=#{id}
+    </delete>
+
+    <select id="select" parameterType="String" resultMap="user">
+        select * from user_info where user_id=#{id}
+    </select>
+
+    <select id="selectAll" resultMap="user">
+        select * from user_info
+    </select>
+
+    <select id="selectByUserName" parameterType="String" resultMap="user">
+        select * from user_info where user_username=#{userName}
+    </select>
+</mapper>

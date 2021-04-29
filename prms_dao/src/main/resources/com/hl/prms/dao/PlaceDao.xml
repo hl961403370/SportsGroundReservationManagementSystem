@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hl.prms.dao.PlaceDao">
+
+
+    <resultMap id="place" type="Place">
+        <id property="pid" column="place_id" javaType="String"/>
+        <result property="pname" column="place_name" javaType="String"/>
+        <result property="plocation" column="place_location" javaType="String"/>
+        <result property="pprofileImg" column="place_profile_img" javaType="String"/>
+        <result property="pnumber" column="place_number" javaType="int"/>
+        <result property="parea" column="place_area" javaType="String"/>
+        <result property="createTime" column="place_create_time" javaType="java.util.Date"/>
+        <result property="lastEditTime" column="place_last_edit_time" javaType="java.util.Date"/>
+        <result property="pstatus" column="place_status" javaType="int"/>
+        <result property="pintroduce" column="place_introduce" javaType="String"/>
+        <result property="ptype" column="place_type" javaType="String"/>
+        <result property="pprice" column="place_price" javaType="String"/>
+    </resultMap>
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="pid" parameterType="Place">
+        insert into place_info(place_name,place_location,place_profile_img,place_number,place_area,place_create_time,place_last_edit_time,place_introduce,place_type,place_price)
+        values(#{pname},#{plocation},#{pprofileImg},#{pnumber},#{parea},#{createTime},#{lastEditTime},#{pintroduce},#{ptype},#{pprice})
+    </insert>
+
+    <update id="update" parameterType="Place">
+        update place_info set place_name=#{pname},place_location=#{plocation},place_profile_img=#{pprofileImg},place_number=#{pnumber},place_area=#{parea},place_status=#{pstatus},place_last_edit_time=#{lastEditTime},place_type=#{ptype},place_price=#{pprice} where place_id=#{pid}
+    </update>
+
+    <delete id="delete" parameterType="String">
+        delete from place_info where place_id=#{pid}
+    </delete>
+
+    <select id="select" parameterType="String" resultMap="place">
+        select * from place_info where place_id=#{pid}
+    </select>
+
+    <select id="selectAll" resultMap="place">
+        select * from place_info
+    </select>
+
+    <select id="selectAllUsable" resultMap="place">
+        select * from place_info where place_status = 1;
+    </select>
+
+</mapper>
